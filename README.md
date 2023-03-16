@@ -1,4 +1,4 @@
-# cfn-AWS CloudFormation Templates
+# cfn
 This repository contains various AWS CloudFormation templates that can be used to create infrastructure resources such as EC2 instances, S3 buckets, and more.
 
 CloudFormation is an infrastructure-as-code service that allows you to define your infrastructure in code and automatically provision and manage resources in AWS.
