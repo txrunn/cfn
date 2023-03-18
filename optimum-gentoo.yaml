@@ -1,11 +1,9 @@
 # CloudFormation YAML template for an (opinionated) Gentoo EC2 instance
-
 AWSTemplateFormatVersion: '2010-09-09'
-
 Parameters:
   KeyName:
     Type: String
-    Description: Name of an existing EC2 key pair to enable SSH access to the instances.
+    Description: Name of key pair to enable SSH access to the instances.
   InstanceType:
     Type: String
     Description: Instance type to launch, e.g. t2.micro
@@ -16,7 +14,6 @@ Parameters:
   SubnetId:
     Type: AWS::EC2::Subnet::Id
     Description: Select the Subnet to deploy the instance in
-
 Resources:
   LatestAmiLookup:
     Type: AWS::CloudFormation::Stack
