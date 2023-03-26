@@ -36,7 +36,7 @@ Resources:
           #!/bin/bash
           dnf -y update
           dnf -y groupinstall "Development Tools"
-          dnf -y install git wget curl zsh
+          dnf -y install git wget curl zsh 
           useradd -m -s /bin/zsh rune
           echo "rune ALL=(ALL) NOPASSWD: ALL" >> /etc/sudoers
 
@@ -47,10 +47,10 @@ Resources:
           sudo -u rune tee /home/rune/.zshrc > /dev/null << EOT
           source /home/rune/antigen.zsh
           
-          antigen use oh-my-zsh
           antigen bundle git
           antigen bundle zsh-users/zsh-autosuggestions
           antigen bundle zsh-users/zsh-syntax-highlighting
+          antigen bundle Aloxaf/fzf-tab
           antigen apply
 
           eval "\$(starship init zsh)"
